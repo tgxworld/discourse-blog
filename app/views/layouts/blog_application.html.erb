@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= yield :title %></title>
+  <meta name="author" content=<%= t("blog.author") %>/>
+  <meta name="copyright" content=<%= t("blog.author") %>/>
+  <%= stylesheet_link_tag "blog" %>
+  <%= stylesheet_link_tag "foundation" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="row">
+    <div class="small-12 large-4 columns">
+      <h1>This is a header</h1>
+    </div>
+
+    <div class="small-12 large-8 columns">
+      <%= yield %>
+    </div>
+  </div>
+</body>
+</html>

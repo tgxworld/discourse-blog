@@ -1,0 +1,17 @@
+<div class="post">
+  <div class="post-created-at"><%= topic.created_at %></div>
+  <div class="post-title"><%= topic.title %></div>
+
+  <%- post = topic.first_post %>
+
+  <div class="post-cooked"><%= post.cooked.html_safe %></div>
+
+  <div class="post-reply-count">
+    <span><%= t("blog.post.discussion") %></span>
+
+    <%- count = topic.reply_count %>
+    <% if count > 0 %>
+      <span>(<%= count %>)</span>
+    <% end %>
+  </div>
+</div>
